@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import ItemTable2 from './components/ItemTable2.js';
 import './App.css';
 
 function App() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://fetch-hiring.s3.amazonaws.com/hiring.json')
+      .then((response) => {
+        setItems(response.data);
+        console.log(response.data)
+      })
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ItemTable2 items={items} />
     </div>
   );
 }
