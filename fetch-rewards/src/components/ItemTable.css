@@ -1,6 +1,15 @@
+.body {
+    max-width: 60em;
+    margin: 0 auto;
+}
+
 .item-table {
     padding: 1em;
     width: 100%;
     border-collapse: collapse;
     margin: 1em 0;
+}
+
+.table-header {
+    background-color: #ffa900;
 }
