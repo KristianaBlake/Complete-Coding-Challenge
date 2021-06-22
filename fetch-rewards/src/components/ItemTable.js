@@ -1,5 +1,6 @@
 import NameList from "./NameList.js";
 import IdList from "./IdList.js"; 
+import "./ItemTable.css";
 
 const ItemTable = (props) => {
 
@@ -8,7 +9,7 @@ const ItemTable = (props) => {
   });
 
   return (
-    <table>
+    <table className="item-table">
         <thead>
             <tr>
                 <th>List Id</th>
