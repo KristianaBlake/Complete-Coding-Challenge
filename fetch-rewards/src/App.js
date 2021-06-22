@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ItemTable2 from './components/ItemTable2.js';
+import ItemTable from './components/ItemTable2.js';
 import './App.css';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <ItemTable2 items={items} />
+      <ItemTable items={items} />
     </div>
   );
 }
