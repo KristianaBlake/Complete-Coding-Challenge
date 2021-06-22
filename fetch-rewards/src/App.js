@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ItemTable from './components/ItemTable2.js';
+import ItemTable from './components/ItemTable.js';
 import './App.css';
 
 function App() {
